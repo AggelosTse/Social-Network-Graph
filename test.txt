@@ -1,1 +1,3 @@
 {'aggelos': ['we']}
+{'rr': ['sss']}
+{'aggelos': ['titos', 'mpelios'], 'andreas': ['aggelos', 'titos']}
