@@ -5,7 +5,7 @@ def remove(graph):
        
     removenode = input("Which node would you like to remove?\n").strip().lower()
     clear_screen()
-    while removenode not in graph:
+    while removenode not in graph:                #removes the node with its edges from the dictionary
            removenode = input("Node not in graph. Give another node\n").strip().lower()
            time.sleep(2)
            clear_screen()

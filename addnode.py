@@ -3,17 +3,17 @@ from clearscreen import clear_screen
 def add(graph):
     while True:
            print("Enter node name: (Enter no to stop)\n")
-           nodename = input().strip().lower()
+           nodename = input().strip().lower()                      #asks for nodes to add repeatedly until the user enters "no"
 
            if nodename == "no":
                clear_screen()
-               break  # Exit the loop if the user types "no"
+               break  
            clear_screen()
-           # Ensure the node is in the graph
-           if nodename not in graph:
+           
+           if nodename not in graph:           #if the node isnt in the dictionary, it initializes its list of neighbors
                graph[nodename] = []
 
-           # Ask if the user wants to connect with other nodes
+           # Asks repeatedly if the user wants to connect with other nodes until user types no
            answer1 = input("Do you want to connect with other nodes? (yes/no)\n").strip().lower()
 
            while answer1 not in ["yes", "no"]:
@@ -26,11 +26,11 @@ def add(graph):
                    newnode = input().strip()
                    clear_screen()
                    if nodename in graph:
-                       graph[nodename].append(newnode)
+                       graph[nodename].append(newnode)      #adds the new node in the list of neighbors of the nodename in the dictionary
                    else:
                        graph[nodename] = [newnode]
 
-                   answer1 = input("Do you want to connect with another node? (yes/no)\n").strip().lower()
+                   answer1 = input("Do you want to connect with another node? (yes/no)\n").strip().lower()      
                    while answer1 != "yes" and answer1 != "no":
                        clear_screen()
                        answer1 = input("Error occurred, please try again: \n").strip().lower()

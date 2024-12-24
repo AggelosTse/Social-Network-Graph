@@ -4,19 +4,16 @@ import matplotlib.pyplot as plt
 def displaygraph(graph):
     
     
-    # Create a directed graph (DiGraph) from the adjacency list
-    G = nx.DiGraph()
+    
+    G = nx.DiGraph()        #initializes an empty graph from nx library
 
     # Add edges to the graph
-    for node, neighbors in graph.items():
-        if not isinstance(neighbors, list):
-            print(f"Error: Neighbors for node {node} should be a list.")
-            return
+    for node, neighbors in graph.items():       
         for neighbor in neighbors:
-            G.add_edge(node, neighbor)
+            G.add_edge(node, neighbor)          #updates the graph and adds edges on every node in the adjucency list
 
     # Draw the graph
-    plt.figure(figsize=(6, 6))
+    plt.figure(figsize=(6, 6))                  #displays the graph
     nx.draw(
         G, 
         with_labels=True, 

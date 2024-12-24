@@ -1,7 +1,7 @@
 from clearscreen import clear_screen
 
 
-def printmenu():
+def printmenu():                        #displays the menu
     print("1. Display the graph")
     print("2. Add a node to the graph")
     print("3. Remove a node from the graph")
