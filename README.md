@@ -34,7 +34,7 @@ This allows:
 
 ---
 
-## ⚙️ Installation & Usage
+# Installation
 
 # Clone the repository
 
